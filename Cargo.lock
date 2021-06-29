@@ -1792,9 +1792,9 @@ dependencies = [
  "serde_json",
  "storage",
  "tauri",
+ "tauri-build",
  "tokio",
  "unescape",
- "winres",
 ]
 
 [[package]]
@@ -3126,6 +3126,20 @@ dependencies = [
  "tokio",
  "uuid",
  "zip",
+]
+
+[[package]]
+name = "tauri-build"
+version = "1.0.0-beta.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bcefc20a0068157a26623f431aefa165601fe7e612b3bba8fc7b16995f91d86a"
+dependencies = [
+ "anyhow",
+ "proc-macro2",
+ "quote",
+ "serde_json",
+ "tauri-utils",
+ "winres",
 ]
 
 [[package]]
