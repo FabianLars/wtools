@@ -2,7 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@chakra-ui/icons': ^1.0.13
-  '@chakra-ui/react': 1.6.4
+  '@chakra-ui/react': ^1.6.4
   '@emotion/react': ^11.4.0
   '@emotion/styled': ^11.3.0
   '@tauri-apps/api': ^1.0.0-beta.4
@@ -268,7 +268,7 @@ packages:
     resolution: {integrity: sha512-Wvzcw4mBYbTagyBVZpAJWI06auSIj033T/yNE0Zn1xcup83MieCddZA7ls3kme17L4NOGBrQ09Q+nKB41RLWBA==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      core-js-pure: 3.15.1
+      core-js-pure: 3.15.2
       regenerator-runtime: 0.13.7
     dev: true
 
@@ -2167,7 +2167,7 @@ packages:
     dependencies:
       caniuse-lite: 1.0.30001241
       colorette: 1.2.2
-      electron-to-chromium: 1.3.760
+      electron-to-chromium: 1.3.761
       escalade: 3.1.1
       node-releases: 1.1.73
     dev: true
@@ -2568,8 +2568,8 @@ packages:
       toggle-selection: 1.0.6
     dev: false
 
-  /core-js-pure/3.15.1:
-    resolution: {integrity: sha512-OZuWHDlYcIda8sJLY4Ec6nWq2hRjlyCqCZ+jCflyleMkVt3tPedDVErvHslyS2nbO+SlBFMSBJYvtLMwxnrzjA==}
+  /core-js-pure/3.15.2:
+    resolution: {integrity: sha512-D42L7RYh1J2grW8ttxoY1+17Y4wXZeKe7uyplAI3FkNQyI5OgBIAjUfFiTPfL1rs0qLpxaabITNbjKl1Sp82tA==}
     requiresBuild: true
     dev: true
 
@@ -2907,8 +2907,8 @@ packages:
     resolution: {integrity: sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=}
     dev: true
 
-  /electron-to-chromium/1.3.760:
-    resolution: {integrity: sha512-XPKwjX6pHezJWB4FLVuSil9gGmU6XYl27ahUwEHODXF4KjCEB8RuIT05MkU1au2Tdye57o49yY0uCMK+bwUt+A==}
+  /electron-to-chromium/1.3.761:
+    resolution: {integrity: sha512-7a/wV/plM/b95XjTdA2Q4zAxxExTDKkNQpTiaU/nVT8tGCQVtX9NsnTjhALBFICpOB58hU6xg5fFC3CT2Bybpg==}
     dev: true
 
   /emoji-regex/7.0.3:

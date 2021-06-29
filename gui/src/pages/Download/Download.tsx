@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Textarea, useToast } from '@chakra-ui/react';
+import { Box, Button, Flex, Textarea } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import { invoke } from '@tauri-apps/api/tauri';
 import { errorToast, successToast } from '../../helpers/toast';
@@ -11,7 +11,7 @@ type Props = {
 const Download = ({ isOnline, setNavDisabled }: Props) => {
     const [areaValue, setAreaValue] = useState('');
     const [isLoading, setIsLoading] = useState(false);
-    const toast = useToast();
+    const toast = console.log;
 
     const downloadFiles = () => {
         setIsLoading(true);

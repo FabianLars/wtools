@@ -7,6 +7,27 @@
         <meta content="#1A202C" name="theme-color" />
         <meta content="React frontend for mw-toolbox by FabianLars" name="description" />
         <title>mw-toolbox by FabianLars</title>
+        <script>
+var _l = console.log;
+var _w = console.warn;
+var _e = console.error;
+console.log = function (x) {
+    window.__TAURI__.event.emit('dbglog', x);
+    _l.apply(console, arguments);
+};
+console.warn = function (x) {
+    window.__TAURI__.event.emit('dbglog', x);
+    _w.apply(console, arguments);
+};
+console.error = function (x) {
+    window.__TAURI__.event.emit('dbglog', x);
+    _e.apply(console, arguments);
+};
+
+(function () {
+    window.__TAURI__.event.emit('dbglog', 'index').then(() => {});
+})();
+        </script>
     </head>
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>

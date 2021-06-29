@@ -3,7 +3,6 @@ import { invoke } from '@tauri-apps/api/tauri';
 import React, { useEffect, useState } from 'react';
 import {
     Button,
-    Checkbox,
     Divider,
     Flex,
     FormControl,
@@ -11,7 +10,6 @@ import {
     IconButton,
     Input,
     Select,
-    useToast,
 } from '@chakra-ui/react';
 
 import type { Profile } from '../../App';
@@ -37,7 +35,7 @@ const Account = ({
     const [urlInvalid, seturlInvalid] = useState(false);
     const [usernameInvalid, setUsnameInvalid] = useState(false);
     const [passwordInvalid, setPasswordInvalid] = useState(false);
-    const toast = useToast();
+    const toast = console.log;
 
     const login = () => {
         setLoggingin(true);
@@ -240,19 +238,6 @@ const Account = ({
                 />
             </FormControl>
             <Flex direction="row" w="100%" h="40px" justify="flex-end" mt={2}>
-                <Checkbox
-                    isDisabled={logginin || profiles[currentProfile].isOnline}
-                    isChecked={profiles[currentProfile].savePassword}
-                    onChange={(event) =>
-                        setProfiles((old) => {
-                            const curr = [...old];
-                            curr[currentProfile].savePassword = event.target.checked;
-                            return curr;
-                        })
-                    }
-                >
-                    Remember password
-                </Checkbox>
                 <Divider orientation="vertical" mx={2} />
                 <Button
                     isDisabled={urlInvalid || usernameInvalid || passwordInvalid}

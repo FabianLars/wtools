@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Flex, Textarea, useToast } from '@chakra-ui/react';
+import { Button, Flex, Textarea } from '@chakra-ui/react';
 import { invoke } from '@tauri-apps/api/tauri';
 import { errorToast, successToast } from '../../helpers/toast';
 
@@ -12,7 +12,7 @@ const Purge = ({ isOnline, setNavDisabled }: Props) => {
     const [isPurging, setIsPurging] = useState(false);
     const [isNulling, setIsNulling] = useState(false);
     const [areaValue, setAreaValue] = useState('');
-    const toast = useToast();
+    const toast = console.log;
 
     const purgePages = (isNulledit: boolean) => {
         if (isNulledit) {
@@ -42,7 +42,7 @@ const Purge = ({ isOnline, setNavDisabled }: Props) => {
 
     return (
         <Flex direction="column" align="center" h="100%" w="100%">
-            <Textarea
+            {/* <Textarea
                 resize="none"
                 value={areaValue}
                 onChange={(event) => setAreaValue(event.target.value)}
@@ -80,7 +80,7 @@ const Purge = ({ isOnline, setNavDisabled }: Props) => {
                 >
                     Nulledit all
                 </Button>
-            </Flex>
+            </Flex> */}
         </Flex>
     );
 };

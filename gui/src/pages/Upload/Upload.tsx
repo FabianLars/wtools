@@ -1,4 +1,4 @@
-import { Box, Button, Flex, FormControl, FormLabel, Input, useToast } from '@chakra-ui/react';
+import { Box, Button, Flex, FormControl, FormLabel, Input } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import { invoke } from '@tauri-apps/api/tauri';
 import { open } from '@tauri-apps/api/dialog';
@@ -16,7 +16,7 @@ const Upload = ({ isOnline, setNavDisabled }: Props) => {
     const [isWaiting, setIsWaiting] = useState(false);
     const [uploadtext, setUploadtext] = useState('');
     const [files, setFiles] = useState<string[]>([]);
-    const toast = useToast();
+    const toast = console.log;
 
     const clearList = () => {
         invoke('cache_set', { key: 'files-cache', value: '' });

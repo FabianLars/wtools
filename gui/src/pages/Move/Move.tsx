@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Textarea, useToast } from '@chakra-ui/react';
+import { Box, Button, Flex, Textarea } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import { invoke } from '@tauri-apps/api/tauri';
 import { errorToast, successToast } from '../../helpers/toast';
@@ -12,7 +12,7 @@ const Move = ({ isOnline, setNavDisabled }: Props) => {
     const [isLoading, setIsLoading] = useState(false);
     const [areaFrom, setAreaFrom] = useState('');
     const [areaTo, setAreaTo] = useState('');
-    const toast = useToast();
+    const toast = console.log;
 
     const movePages = () => {
         setIsLoading(true);

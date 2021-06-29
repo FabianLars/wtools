@@ -90,7 +90,7 @@ const Header = ({ isDisabled, isOnline }: HeaderProps): JSX.Element => {
                         Upload
                     </HeaderItem>
                 </Flex>
-                <Menu isLazy>
+                {/* <Menu isLazy>
                     <MenuButton as={Button} h="50px" display={[null, null, 'none']}>
                         Show Navigation Menu
                     </MenuButton>
@@ -120,7 +120,7 @@ const Header = ({ isDisabled, isOnline }: HeaderProps): JSX.Element => {
                             Upload
                         </MenuItem>
                     </MenuList>
-                </Menu>
+                </Menu> */}
                 <Spacer />
                 {isDisabled ? (
                     <Spinner mr={2} color="red.700" />

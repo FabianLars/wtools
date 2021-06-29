@@ -35,6 +35,9 @@ fn main() {
             window.listen("cancel-autoedit", move |_| {
                 CANCEL_EDIT.store(true, Ordering::Relaxed)
             });
+            window.listen("dbglog", move |e| {
+                println!("{:?}", e);
+            });
         })
         .manage(Mutex::new(HashMap::<String, Value>::new()))
         .invoke_handler(tauri::generate_handler![

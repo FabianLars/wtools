@@ -10,7 +10,6 @@ import {
     Input,
     Select,
     Textarea,
-    useToast,
 } from '@chakra-ui/react';
 
 import { errorToast } from '../../helpers/toast';
@@ -27,7 +26,7 @@ const List = ({ isOnline, setNavDisabled }: Props) => {
     const [paramInfo, setParamInfo] = useState('');
     const [paramInput, setParamInput] = useState('');
     const [paramRequired, setParamRequired] = useState(true);
-    const toast = useToast();
+    const toast = console.log;
 
     const getList = () => {
         if (listType !== '') {

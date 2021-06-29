@@ -11,6 +11,9 @@ version = "0.1.0"
 # default = [ "custom-protocol" ]
 custom-protocol = ["tauri/custom-protocol"]
 
+[build-dependencies]
+tauri-build = {version = "1.0.0-beta.2"}
+
 [dependencies]
 anyhow = "1"
 mw-tools = {path = "../../crates/mw-tools"}
@@ -25,10 +28,3 @@ storage = {path = "../../crates/storage"}
 tauri = {version = "1.0.0-beta.4", features = ["dialog-open", "reqwest-client", "shell-open"] }
 tokio = "1"
 unescape = "0.1"
-
-[target."cfg(windows)".build-dependencies]
-winres = "0.1"
-
-[[bin]]
-name = "mw-toolbox"
-path = "src/main.rs"

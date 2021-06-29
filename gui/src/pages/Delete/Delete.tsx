@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Input, Textarea, useToast } from '@chakra-ui/react';
+import { Box, Button, Flex, Input, Textarea } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import { invoke } from '@tauri-apps/api/tauri';
 import { errorToast, successToast } from '../../helpers/toast';
@@ -12,7 +12,7 @@ const Delete = ({ isOnline, setNavDisabled }: Props) => {
     const [areaValue, setAreaValue] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [reason, setReason] = useState('');
-    const toast = useToast();
+    const toast = console.log;
 
     const deletePages = () => {
         setIsLoading(true);

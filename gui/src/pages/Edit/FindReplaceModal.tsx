@@ -1,6 +1,5 @@
 import {
     Button,
-    Checkbox,
     Flex,
     IconButton,
     Input,
@@ -88,20 +87,7 @@ const FindReplaceModal = ({ isOpen, onClose, patterns, setPatterns }: Props) => 
                                         })
                                     }
                                 />
-                                <Checkbox
-                                    verticalAlign="center"
-                                    m={1}
-                                    isChecked={localPatterns[index]['isRegex']}
-                                    onChange={(event) =>
-                                        setLocalPatterns((oldArr) => {
-                                            const values = [...oldArr];
-                                            values[index]['isRegex'] = event.target.checked;
-                                            return values;
-                                        })
-                                    }
-                                >
-                                    Regex
-                                </Checkbox>
+
                                 <Link
                                     href="https://docs.rs/regex/"
                                     isExternal

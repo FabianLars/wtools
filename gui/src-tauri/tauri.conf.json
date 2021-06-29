@@ -3,11 +3,12 @@
         "distDir": "../dist",
         "devPath": "http://localhost:3000",
         "beforeDevCommand": "pnpm start",
-        "beforeBuildCommand": "pnpm build"
+        "beforeBuildCommand": "pnpm build",
+        "withGlobalTauri": true
     },
     "tauri": {
         "bundle": {
-            "active": true,
+            "active": false,
             "targets": "all",
             "identifier": "de.fabianlars.mwtoolbox",
             "icon": [
@@ -46,7 +47,7 @@
             }
         ],
         "security": {
-            "csp": "default-src blob: data: filesystem: ws: http: https: 'unsafe-eval' 'unsafe-inline' 'self' img-src: 'self'"
+            "csp": ""
         },
         "updater": {
             "active": false,

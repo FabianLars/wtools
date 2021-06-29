@@ -1,14 +1,4 @@
-import {
-    Button,
-    Checkbox,
-    Flex,
-    Grid,
-    GridItem,
-    Input,
-    Textarea,
-    useDisclosure,
-    useToast,
-} from '@chakra-ui/react';
+import { Button, Flex, Grid, GridItem, Input, Textarea, useDisclosure } from '@chakra-ui/react';
 import React, { useEffect, useRef, useState } from 'react';
 import { invoke } from '@tauri-apps/api/tauri';
 import FindReplaceModal from './FindReplaceModal';
@@ -38,7 +28,7 @@ const Edit = ({ isOnline, setNavDisabled }: Props) => {
         { find: '', replace: '', isRegex: false },
     ]);
     const { isOpen, onOpen, onClose } = useDisclosure();
-    const toast = useToast();
+    const toast = console.log;
 
     const start = () => {
         setIsRunning(true);
@@ -200,7 +190,7 @@ const Edit = ({ isOnline, setNavDisabled }: Props) => {
                             <Button
                                 mt={2}
                                 title="This will be processed before contents get displayed!"
-                                onClick={onOpen}
+                                //onClick={onOpen}
                                 isDisabled={isLoading}
                             >
                                 Setup Find & Replace
@@ -241,22 +231,7 @@ const Edit = ({ isOnline, setNavDisabled }: Props) => {
                                 >
                                     {isRunning ? 'Stop' : 'Start'}
                                 </Button>
-                                <Checkbox
-                                    isChecked={isAuto}
-                                    onChange={(event) => {
-                                        setIsAuto(event.target.checked);
-                                    }}
-                                    onBlur={() => {
-                                        invoke('cache_set', {
-                                            key: 'edit-isauto',
-                                            value: isAuto,
-                                        });
-                                    }}
-                                    isDisabled={isRunning}
-                                    whiteSpace="nowrap"
-                                >
-                                    Auto-Save
-                                </Checkbox>
+
                                 <Button
                                     w="100%"
                                     isDisabled={!isRunning || !currentPage}
@@ -279,12 +254,12 @@ const Edit = ({ isOnline, setNavDisabled }: Props) => {
                 </Flex>
             </Flex>
 
-            <FindReplaceModal
+            {/* <FindReplaceModal
                 isOpen={isOpen}
                 onClose={onClose}
                 patterns={patterns}
                 setPatterns={setPatterns}
-            />
+            /> */}
         </>
     );
 };
